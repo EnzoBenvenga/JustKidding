@@ -1,0 +1,43 @@
+import pyautogui 
+import webbrowser as wb
+import time
+wb.open("https://meet.google.com/uhe-ijus-evo")
+time.sleep(3)
+for i in range (1):
+    pyautogui.hotkey('ctrl', 'd')
+    pyautogui.hotkey('ctrl', 'e')
+time.sleep(3)
+for i in range(1):
+    pyautogui.hotkey('ctrl', 'alt', 'c')
+    time.sleep(2)
+    pyautogui.press("P")
+    pyautogui.press("r")
+    pyautogui.press("e")
+    pyautogui.press("s")
+    pyautogui.press("e")
+    pyautogui.press("n")
+    pyautogui.press("t")
+    pyautogui.press("e")
+    pyautogui.press(",")
+    pyautogui.press("space")
+NomeDoProfessor1 = "Marcelo"
+if (NomeDoProfessor1 == "Ricardo"):
+    pyautogui.write(NomeDoProfessor1)
+    pyautogui.press(".")
+    pyautogui.press("enter")
+    time.sleep(1)
+    pyautogui.hotkey('ctrl', 'alt', 'c')
+else:
+    pyautogui.press("P")
+    pyautogui.press("r")
+    pyautogui.press("o")
+    pyautogui.press("f")
+    pyautogui.press("e")
+    pyautogui.press("s")
+    pyautogui.press("s")
+    pyautogui.press("o")
+    pyautogui.press("r")
+    pyautogui.press(".")
+    pyautogui.press("enter")
+    time.sleep(1)
+    pyautogui.hotkey('ctrl', 'alt', 'c')
