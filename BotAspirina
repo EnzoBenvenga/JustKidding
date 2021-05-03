@@ -1,0 +1,25 @@
+import os
+
+def processar_resposta(resposta,nome):
+    if resposta == '1':
+        print(f'{os.linesep}{nome}, obrigado pelo interesse no ASP. Os integrantes do grupo são: André C, André F, Carlos, Guilherme, Enzo, João R, João V, Luiz, Pedro, Rodrigo, Cauã e Gaba.')
+    if resposta == '2':
+        print(f'{os.linesep}{nome}, obrigado pelo interesse no ASP. Nós criamos o Aspirina em um momento pandêmico, portanto, em um momento caótico e ruim. O ASP veio como resposta às trevas que vivemos.')
+    if resposta == '3':
+        print(f'{os.linesep}{nome}, obrigado pelo interesse no ASP. Infelizmente, no momento, estamos fechados para novos membros.') 
+    if resposta == '12':
+        print(f'{os.linesep}{nome}, parabéns. Você descobriu o segredo. Entre em contato com o grupo para receber sua vaga.')
+def start():
+    # Apresente seu ChatBot.
+    print("Seja bem-vindo ao ChatBot do Aspirina. Aqui você encontra algumas coisas sobre o grupo, inclusive uma vaga...")
+    # Nome da pessoa.
+    nome = input ("Digite seu nome:")
+    # E-mail da pessoa.
+    email = input ("Digite seu e-mail:")
+    # Ofereça as opções.
+    resposta = input(f'O que você gostaria de saber sobre nosso grupo?{os.linesep}[1] - Quem são os integrantes do grupo?{os.linesep}[2] - Como nós criamos todo o grupo?{os.linesep}[3] - Vocês aceitam novos membros?{os.linesep}') 
+    # Processar a resposta.
+    processar_resposta(resposta,nome)
+
+if __name__ == '__main__':
+    start()
