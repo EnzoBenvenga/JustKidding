@@ -1,0 +1,26 @@
+from PyQt5 import  uic,QtWidgets
+
+
+def funcao_principal():
+    linha1 = formulario.lineEdit.text()
+    linha2 = formulario.lineEdit_2.text()
+
+    print("Insira o nome do aluno:",linha1)
+    print("Insira a nota do aluno:",linha2)
+
+    if formulario.checkBox.isChecked():
+        print("Recuperação!")
+    if formulario.checkBox_3.isChecked():
+        print("Aprovado!")
+    if linha2 == "":
+        print("Insira a nota.")
+    elif linha2 >= '6':
+        print("Passou de ano!")
+    else:
+        print("Estude mais na próxima, amigo!")
+app=QtWidgets.QApplication([])
+formulario=uic.loadUi("formulario.ui")
+formulario.pushButton.clicked.connect(funcao_principal)
+
+formulario.show()
+app.exec()
